@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    // agent mean who perform task
+    stages {
+        stage('Checkout') {
+            steps {
+                // this step means pull code from git repository
+                // here i mention project github repository where java project is present
+                git url: 'https://github.com/Gitesh-Jawale/emart'
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                // here i build  above project using maven
+                sh 'mvn clean package'
+            }
+        }
+    }
+}
