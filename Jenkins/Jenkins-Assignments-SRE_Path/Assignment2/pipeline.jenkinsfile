@@ -12,7 +12,7 @@ pipeline {
         
         stage('Build') {
             steps {
-                dir('Jenkins\Jenkins-Assignments-SRE_Path\Assignment2')
+                dir('SRE/Jenkins/Jenkins-Assignments-SRE_Path/Assignment2')
                 {
                     // here i build  above project using maven
                      sh 'mvn clean package'
