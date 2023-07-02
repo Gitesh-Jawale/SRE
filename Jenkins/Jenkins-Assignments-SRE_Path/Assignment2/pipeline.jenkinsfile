@@ -12,8 +12,12 @@ pipeline {
         
         stage('Build') {
             steps {
-                // here i build  above project using maven
-                sh 'mvn clean package'
+                dir('Jenkins\Jenkins-Assignments-SRE_Path\Assignment2')
+                {
+                    // here i build  above project using maven
+                     sh 'mvn clean package'
+                }
+                
             }
         }
     }
